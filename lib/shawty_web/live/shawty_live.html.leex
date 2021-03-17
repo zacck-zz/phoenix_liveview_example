@@ -1,6 +1,10 @@
 <form action="#" phx-change="validate"  phx-submit="shorten">
   <%= text_input :url, :value, placeholder: "http://verllongurl.long"%>
-  <div> <%= @url_error %> </div>
+  <div> <%= @error %> </div>
   <%= submit "Shorten", phx_disable_with: "Shawtening..."%>
+  <div>
+    <p> Your link: </p>
+    <%= @result %>
+  </div>
 </form>
 
