@@ -21,8 +21,8 @@ defmodule ShawtyWeb.ShawtyLive do
       link = ShawtyWeb.Endpoint.url() <> "/go/" <> slug
       {:noreply, assign(socket, result: link)}
     else
-      false -> (assign_error(socket))
-      _ -> assign(socket, error: "An error occured while storing your link please try again later")
+      false -> {:noreply, (assign_error(socket))}
+      _ -> {:noreply, assign(socket, error: "An error occured while storing your link please try again later")}
     end
   end
 
