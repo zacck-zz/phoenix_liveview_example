@@ -12,9 +12,8 @@ defmodule Shawty.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Shawty.PubSub},
       # Start the Endpoint (http/https)
-      ShawtyWeb.Endpoint
-      # Start a worker by calling: Shawty.Worker.start_link(arg)
-      # {Shawty.Worker, arg}
+      ShawtyWeb.Endpoint,
+      {Shawty.Cache, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
