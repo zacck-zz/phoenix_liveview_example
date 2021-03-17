@@ -1,0 +1,37 @@
+Simple Phoenix Application
+
+This application assumes that one has a working elixir installation set up on the machine running it.
+
+
+1. To setup the application run the following in it's root folder
+`mix deps.get`
+
+This installed the requisite dependencies needed for the application
+
+
+2. To run the application and use it run the following command
+
+`iex -S mix phx.server`
+
+
+This runs the application and it should be accessible at
+
+http//localhost:4000
+
+
+The application provides a form to enter a url to be shortened, which it shall validate
+and if satisfacory provide a shortened url that will redirect on to their original Url
+
+
+Due to time I did  not set up a non volatile database for the application, I instead used
+erlang's inbuilt term storage which will be deleted everytime the application is restarted.
+
+Again in the interest of time I used only phoenix to build the whole application, using
+Phoenix's Liveview for the frontend and a simple Genserver for the persistence of the provided Urls
+
+
+I focused on having most of the applications functionality covered with unit tests albeit I avoided
+testing some tricky usecases
+
+
+Time: I spent around 5 hours building the application.
