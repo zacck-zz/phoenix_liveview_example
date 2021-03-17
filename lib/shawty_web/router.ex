@@ -18,6 +18,8 @@ defmodule ShawtyWeb.Router do
     pipe_through :browser
 
     live "/", ShawtyLive, :index
+
+    resources "/go", ShawtyController
   end
 
   # Other scopes may use custom stacks.
